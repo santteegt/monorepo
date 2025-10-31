@@ -83,7 +83,7 @@ export const EpochDatePicker = (props: Buildable<Field>) => {
         selected={startDate}
         onChange={(date: Date) => handleChange(date)}
         showTimeSelect
-        customInput={<CustomInput /> as ReactElement}
+        customInput={(<CustomInput />) as ReactElement}
         wrapperClassName={props?.className}
         dateFormat="Pp"
       />

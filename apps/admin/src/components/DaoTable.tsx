@@ -167,7 +167,9 @@ export const DaoTable = ({ daoData }: IDaoTableData) => {
         Header: 'Network',
         accessor: 'networkId',
         Cell: ({ value }: { value: string | undefined }): ReactElement => {
-          return <Highlight>{getNetworkName(value)}</Highlight> as ReactElement;
+          return (
+            <Highlight>{getNetworkName(value)}</Highlight>
+          ) as ReactElement;
         },
       },
       {
@@ -197,7 +199,9 @@ export const DaoTable = ({ daoData }: IDaoTableData) => {
         {headerGroups.map((headerGroup) => (
           <Tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
-              <Th {...column.getHeaderProps()}>{column.render('Header') as ReactNode}</Th>
+              <Th {...column.getHeaderProps()}>
+                {column.render('Header') as ReactNode}
+              </Th>
             ))}
           </Tr>
         ))}
@@ -208,7 +212,11 @@ export const DaoTable = ({ daoData }: IDaoTableData) => {
           return (
             <Tr {...row.getRowProps()}>
               {row.cells.map((cell) => {
-                return <Td {...cell.getCellProps()}>{cell.render('Cell') as ReactNode}</Td>;
+                return (
+                  <Td {...cell.getCellProps()}>
+                    {cell.render('Cell') as ReactNode}
+                  </Td>
+                );
               })}
             </Tr>
           );

@@ -70,7 +70,9 @@ export function DaoTable<T extends object>({
               <Tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
-                    <Td {...cell.getCellProps()}>{cell.render('Cell') as ReactNode}</Td>
+                    <Td {...cell.getCellProps()}>
+                      {cell.render('Cell') as ReactNode}
+                    </Td>
                   );
                 })}
               </Tr>

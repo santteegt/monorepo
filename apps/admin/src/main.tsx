@@ -22,13 +22,15 @@ const queryClient = new QueryClient({
 });
 
 root.render(
-  (<StrictMode>
-    <HashRouter>
-      <HausThemeProvider>
-        <QueryClientProvider client={queryClient}>
-          <App />
-        </QueryClientProvider>
-      </HausThemeProvider>
-    </HashRouter>
-  </StrictMode>) as ReactNode
+  (
+    <StrictMode>
+      <HashRouter>
+        <HausThemeProvider>
+          <QueryClientProvider client={queryClient}>
+            <App />
+          </QueryClientProvider>
+        </HausThemeProvider>
+      </HashRouter>
+    </StrictMode>
+  ) as ReactNode
 );

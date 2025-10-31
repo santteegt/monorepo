@@ -85,16 +85,18 @@ export const MemberList = ({
       },
       {
         Header: (): ReactElement => {
-          return <div className="hide-sm">Join Date</div> as ReactElement;
+          return (<div className="hide-sm">Join Date</div>) as ReactElement;
         },
         accessor: 'createdAt',
         Cell: ({ value }: { value: string }): ReactElement => {
-          return <div className="hide-sm">{formatDateFromSeconds(value)}</div> as ReactElement;
+          return (
+            <div className="hide-sm">{formatDateFromSeconds(value)}</div>
+          ) as ReactElement;
         },
       },
       {
         Header: (): ReactElement => {
-          return <div className="hide-sm">Power</div> as ReactElement;
+          return (<div className="hide-sm">Power</div>) as ReactElement;
         },
         accessor: 'delegateShares',
         Cell: ({
@@ -128,7 +130,7 @@ export const MemberList = ({
       },
       {
         Header: (): ReactElement => {
-          return <div className="hide-sm">Delegating To</div> as ReactElement;
+          return (<div className="hide-sm">Delegating To</div>) as ReactElement;
         },
         accessor: 'delegatingTo',
         Cell: ({
@@ -151,7 +153,7 @@ export const MemberList = ({
       },
       {
         Header: (): ReactElement => {
-          return <>Voting</> as ReactElement;
+          return (<>Voting</>) as ReactElement;
         },
         accessor: 'shares',
         Cell: ({ value }: { value: string }): ReactElement => {
@@ -168,7 +170,7 @@ export const MemberList = ({
       },
       {
         Header: (): ReactElement => {
-          return <div>Non-Voting</div> as ReactElement;
+          return (<div>Non-Voting</div>) as ReactElement;
         },
         accessor: 'loot',
         Cell: ({ value }: { value: string }): ReactElement => {
